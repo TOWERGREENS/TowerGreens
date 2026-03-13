@@ -97,12 +97,12 @@ export default function AppHome() {
                 ) : <SkeletonBlock height={180} style={{ marginBottom: '24px' }} />}
 
                 {/* Coins widget */}
-                {user && user.coinsBalance > 0 && (
+                {profile && profile.coins_balance > 0 && (
                     <div onClick={() => navigate('/app/coins')} className="glass-card" style={{ marginBottom: '24px', padding: '16px', background: 'rgba(245,158,11,0.08)', border: '1px solid rgba(245,158,11,0.2)', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: '12px' }}>
                         <span style={{ fontSize: '28px', animation: 'float 3s ease-in-out infinite' }}>🪙</span>
                         <div style={{ flex: 1 }}>
                             <p className="urdu-text" style={{ fontSize: '14px', fontWeight: 600, color: '#F59E0B', lineHeight: 2 }}>
-                                آپ کے پاس {user.coinsBalance} TowerGreens Coins ہیں
+                                آپ کے پاس {profile.coins_balance} TowerGreens Coins ہیں
                             </p>
                             <p className="urdu-text" style={{ fontSize: '12px', color: 'rgba(245,158,11,0.7)', lineHeight: 1.8 }}>
                                 500 پر 500 روپے کی چھوٹ ملے گی

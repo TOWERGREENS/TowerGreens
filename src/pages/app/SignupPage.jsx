@@ -22,7 +22,12 @@ export default function SignupPage() {
         if (form.password.length < 8) { showToast(isUrdu ? 'پاس ورڈ کم از کم 8 حروف' : 'Password min 8 chars', 'error'); return }
         setLoading(true)
         try {
-            const data = await signup({ email: form.email, password: form.password, name: form.name })
+            const data = await signup({
+                email: form.email,
+                password: form.password,
+                name: form.name,
+                phone: form.phone
+            })
             if (data?.requireEmailVerification) {
                 setStep('verify')
                 showToast(isUrdu ? 'تصدیقی کوڈ بھیج دیا گیا' : 'Verification code sent', 'success')

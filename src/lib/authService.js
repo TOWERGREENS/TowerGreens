@@ -3,7 +3,12 @@ import insforge from './insforge'
 
 export const authService = {
     async signUp({ email, password, name, phone }) {
-        const { data, error } = await insforge.auth.signUp({ email, password, name })
+        const { data, error } = await insforge.auth.signUp({
+            email,
+            password,
+            name,
+            metadata: { phone }
+        })
         if (error) throw error
         return data
     },

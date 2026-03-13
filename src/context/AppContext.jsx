@@ -170,7 +170,7 @@ export function AppProvider({ children }) {
     }, [])
 
     const signup = useCallback(async ({ email, password, name, phone }) => {
-        const data = await authService.signUp({ email, password, name })
+        const data = await authService.signUp({ email, password, name, phone })
         return data  // returns { requireEmailVerification, ... }
     }, [])
 
@@ -183,6 +183,7 @@ export function AppProvider({ children }) {
             await authService.createProfile({
                 id: data.user.id,
                 name: data.user.name || email.split('@')[0],
+                phone: data.user.metadata?.phone || '',
                 role: 'customer',
             }).catch(() => { })
             const prof = await authService.getProfile(data.user.id).catch(() => null)

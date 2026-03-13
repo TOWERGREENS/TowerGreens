@@ -11,7 +11,7 @@ export default function ProfilePage() {
 
     const handleLogout = () => { logout(); navigate('/app/login') }
 
-    const coins = user?.coinsBalance || 0
+    const coins = profile?.coins_balance || 0
     const coinsToNext = Math.max(0, 500 - coins)
     const progress = Math.min(100, (coins / 500) * 100)
 
