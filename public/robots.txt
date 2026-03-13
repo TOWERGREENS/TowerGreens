@@ -1,0 +1,37 @@
+User-agent: *
+Allow: /
+Allow: /about
+Allow: /products
+Allow: /veggies
+Allow: /salads
+Allow: /healthy-food
+Allow: /chinese-style
+Allow: /super-healthy
+Allow: /processed-food
+Allow: /how-it-works
+Allow: /hydroponic-towers
+Allow: /why-towergreens
+Allow: /contact
+Allow: /faq
+Allow: /blog
+Allow: /terms
+Allow: /terms-en
+Allow: /privacy
+Allow: /privacy-en
+Disallow: /admin
+Disallow: /rider
+Disallow: /app
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://towergreens.site/sitemap.xml
